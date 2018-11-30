@@ -1,3 +1,3 @@
-/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/CMakeFiles/untitled.dir
+/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/CMakeFiles/untitled.dir

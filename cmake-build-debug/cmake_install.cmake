@@ -1,4 +1,4 @@
-# Install script for directory: /home/poldera_sithgod/CLionProjects/MultiLista-Delucca
+# Install script for directory: /home/poldera_sithgod/Documents/INE5609-Trabalho-Final
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
