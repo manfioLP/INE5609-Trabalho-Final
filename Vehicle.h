@@ -58,7 +58,7 @@ Vehicle::Vehicle(std::string plate, std::string state, std::string city, std::st
         _plate{plate},
         _final{final},
         _state{state},
-        _builder{builder},
+        _builder{builder}
 {}
 
 const std::string &Vehicle::get_builder() const {

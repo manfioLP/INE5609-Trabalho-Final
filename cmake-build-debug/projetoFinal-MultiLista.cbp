@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug"/>
+				<Option working_dir="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug"/>
+				<Option working_dir="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug"/>
+				<Option working_dir="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled">
-				<Option output="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug"/>
+				<Option output="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="untitled/fast">
-				<Option output="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug"/>
+				<Option output="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/untitled" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,35 +77,35 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 untitled/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/MultiList.h">
+		<Unit filename="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/MultiList.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/System.h">
+		<Unit filename="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/System.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/Vehicle.h">
+		<Unit filename="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/Vehicle.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/main.cpp">
+		<Unit filename="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/main.cpp">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/strucs/ArrayList.h">
+		<Unit filename="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/strucs/ArrayList.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/strucs/InnerLinkedList.h">
+		<Unit filename="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/strucs/InnerLinkedList.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/strucs/LinkedList.h">
+		<Unit filename="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/strucs/LinkedList.h">
 			<Option target="untitled"/>
 		</Unit>
-		<Unit filename="/home/poldera_sithgod/CLionProjects/MultiLista-Delucca/CMakeLists.txt">
+		<Unit filename="/home/poldera_sithgod/Documents/INE5609-Trabalho-Final/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
