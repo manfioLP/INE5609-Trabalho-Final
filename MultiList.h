@@ -2,8 +2,8 @@
 // Created by poldera_sithgod on 26/11/18.
 //
 
-#ifndef PROJETOFINAL_MULTILISTA_SYSTEM_H
-#define PROJETOFINAL_MULTILISTA_SYSTEM_H
+#ifndef MULTILISTA_H
+#define MULTILISTA_H
 
 #include <stdexcept> // C++ exceptions
 
@@ -20,7 +20,7 @@ public:
 
     ~MultiList();
 
-    T searchData(std::string param, int paramType);
+    LinkedList<T*>* searchData(std::string param, int paramType);
 
     T searchData(std::string param1, int param1type, std::string param2, int param2type);
 
@@ -35,26 +35,26 @@ public:
 
 private:
     bool plateAlreadyExists(std::string plate);
-    void insertIntoDirectory(Vehicle *vehicle, LinkedList<InnerLinkedList<Vehicle *> *> directory, std::string subkey);
-    T searchDataByCity(std::string param);
-    T searchDataByState(std::string param);
-    T searchDataByFinal(std::string param);
-    T searchDataByBuilder(std::string param);
+    void insertIntoDirectory(Vehicle *vehicle, LinkedList<InnerLinkedList<Vehicle *> *>* directory, std::string subkey);
+    LinkedList<T*>* searchDataByCity(std::string param);
+    LinkedList<T*>* searchDataByState(std::string param);
+    LinkedList<T*>* searchDataByFinal(std::string param);
+    LinkedList<T*>* searchDataByBuilder(std::string param);
     LinkedList<InnerLinkedList<Vehicle *> *> &setAuxDirectory(int paramType);
 
-    LinkedList<InnerLinkedList<Vehicle *> *> _builderDirectory;
-    LinkedList<InnerLinkedList<Vehicle *> *> _stateDirectory;
-    LinkedList<InnerLinkedList<Vehicle *> *> _cityDirectory;
-    LinkedList<InnerLinkedList<Vehicle *> *> _finalDirectory;
+    LinkedList<InnerLinkedList<Vehicle *> *> _builderDirectory{};
+    LinkedList<InnerLinkedList<Vehicle *> *> _stateDirectory{};
+    LinkedList<InnerLinkedList<Vehicle *> *> _cityDirectory{};
+    LinkedList<InnerLinkedList<Vehicle *> *> _finalDirectory{};
     //Vehicle _vehicles[20];
 };
 
 template<typename T>
 MultiList<T>::MultiList() {
-    _builderDirectory = new LinkedList<InnerLinkedList<Vehicle *> *>; //paramType 0
-    _finalDirectory = new LinkedList<InnerLinkedList<Vehicle *> *>; //paramType 1
-    _stateDirectory = new LinkedList<InnerLinkedList<Vehicle *> *>; //paramType 2
-    _cityDirectory = new LinkedList<InnerLinkedList<Vehicle *> *>; //paramType 3
+//    _builderDirectory = new LinkedList<InnerLinkedList<Vehicle *> *>; //paramType 0
+//    _finalDirectory = new LinkedList<InnerLinkedList<Vehicle *> *>; //paramType 1
+//    _stateDirectory = new LinkedList<InnerLinkedList<Vehicle *> *>; //paramType 2
+//    _cityDirectory = new LinkedList<InnerLinkedList<Vehicle *> *>; //paramType 3
 }
 
 template<typename T>
@@ -74,7 +74,7 @@ MultiList<T>::~MultiList() {
 template <typename T>
 T& MultiList<T>::getVehicleByPlate(const std::string plate) {
     for(int pos = 0; pos < _builderDirectory.size(); pos++) {
-        for(int innerpos = 0; innerpos < _builderDirectory.at(pos); innerpos++){
+        for(int innerpos = 0; innerpos < _builderDirectory.at(pos)->size(); innerpos++){
             Vehicle* vehicle = _builderDirectory.at(pos)->at(innerpos);
             if (vehicle->get_plate() == plate)
                 return vehicle;
@@ -91,16 +91,16 @@ void MultiList<T>::insertVehicle(const std::string plate, const std::string stat
 
     Vehicle *vehicle = new Vehicle(plate, state, city, builder, final, year);
 
-    insertIntoDirectory(vehicle, _builderDirectory, vehicle->get_builder());
-    insertIntoDirectory(vehicle, _stateDirectory, vehicle->get_state());
-    insertIntoDirectory(vehicle, _finalDirectory, vehicle->get_final());
-    insertIntoDirectory(vehicle, _cityDirectory, vehicle->get_city());
+    insertIntoDirectory(vehicle, &_builderDirectory, vehicle->get_builder());
+    insertIntoDirectory(vehicle, &_stateDirectory, vehicle->get_state());
+    insertIntoDirectory(vehicle, &_finalDirectory, vehicle->get_final());
+    insertIntoDirectory(vehicle, &_cityDirectory, vehicle->get_city());
 }
 
 template <typename T>
 bool MultiList<T>::plateAlreadyExists(std::string plate) {
     for(int pos = 0; pos < _builderDirectory.size(); pos++) {
-        for(int innerpos = 0; innerpos < _builderDirectory.at(pos); innerpos++){
+        for(int innerpos = 0; innerpos < _builderDirectory.at(pos)->size(); innerpos++){
             if (_builderDirectory.at(pos)->at(innerpos)->get_plate() == plate)
                 return true;
         }
@@ -109,22 +109,22 @@ bool MultiList<T>::plateAlreadyExists(std::string plate) {
 }
 
 template<typename T>
-void MultiList<T>::insertIntoDirectory(Vehicle *vehicle, LinkedList<InnerLinkedList<Vehicle *> *> directory,
+void MultiList<T>::insertIntoDirectory(Vehicle *vehicle, LinkedList<InnerLinkedList<Vehicle *> *>* directory,
                                        const std::string subkey) {
-    if (directory.empty()) {
-        directory.push_back(new InnerLinkedList<Vehicle *>(subkey));
-        directory.at(0)->push_front(vehicle);
+    if (directory->empty()) {
+        directory->push_back(new InnerLinkedList<Vehicle *>(subkey));
+        directory->at(0)->push_front(vehicle);
     } else {
         bool inserted = false;
-        for (auto pos = 0; pos < directory.size(); pos++) {
-            if (directory.at(pos)->get_type() == subkey) {
-                directory.at(pos)->push_front(vehicle);
+        for (auto pos = 0; pos < directory->size(); pos++) {
+            if (directory->at(pos)->get_type() == subkey) {
+                directory->at(pos)->push_front(vehicle);
                 inserted = true;
             }
         }
         if (!inserted) {
-            directory.push_front(new InnerLinkedList<Vehicle *>(subkey));
-            directory.at(0)->push_front(vehicle);
+            directory->push_front(new InnerLinkedList<Vehicle *>(subkey));
+            directory->at(0)->push_front(vehicle);
         }
     }
 }
@@ -132,13 +132,12 @@ void MultiList<T>::insertIntoDirectory(Vehicle *vehicle, LinkedList<InnerLinkedL
 template<typename T>
 T MultiList<T>::removeVehicle(const std::string plate) {
     T removedVehicle;
-    bool
-    removed
+    bool removed = false;
     for (int pos = 0; pos < _stateDirectory.size(); pos++) {
-        for (int innerpos = 0; innerpos < _stateDirectory.at(pos); innerpos++) {
+        for (int innerpos = 0; innerpos < _stateDirectory.at(pos)->size(); innerpos++) {
             Vehicle v = _stateDirectory.at(pos)->at(innerpos);
             if (v.get_plate() == plate) {
-                _stateDirectory.at(pos)->remove(v);
+                _stateDirectory.at(pos)->remove(&v);
                 removedVehicle = v;
                 removed = true;
             }
@@ -150,7 +149,7 @@ T MultiList<T>::removeVehicle(const std::string plate) {
 }
 
 template<typename T>
-T MultiList<T>::searchData(const std::string param, int paramType) {
+LinkedList<T*>* MultiList<T>::searchData(const std::string param, int paramType) {
     switch (paramType) {
         case 0:
             return searchDataByBuilder(param);
@@ -159,12 +158,12 @@ T MultiList<T>::searchData(const std::string param, int paramType) {
         case 2:
             return searchDataByState(param);
         case 3:
-            return searchDataByCity(param)
+            return searchDataByCity(param);
     }
 }
 
 template<typename T>
-T MultiList<T>::searchDataByBuilder(std::string param) {
+LinkedList<T*>* MultiList<T>::searchDataByBuilder(std::string param) {
     for (int pos = 0; pos < _builderDirectory.size(); pos++) {
         if (_builderDirectory.at(pos)->at(0)->get_builder() == param)
             return _builderDirectory.at(pos);
@@ -172,7 +171,7 @@ T MultiList<T>::searchDataByBuilder(std::string param) {
 }
 
 template<typename T>
-T MultiList<T>::searchDataByState(std::string param) {
+LinkedList<T*>* MultiList<T>::searchDataByState(std::string param) {
     for (int pos = 0; pos < _stateDirectory.size(); pos++) {
         if (_stateDirectory.at(pos)->at(0)->get_builder() == param)
             return _stateDirectory.at(pos);
@@ -180,7 +179,7 @@ T MultiList<T>::searchDataByState(std::string param) {
 }
 
 template<typename T>
-T MultiList<T>::searchDataByCity(std::string param) {
+LinkedList<T*>* MultiList<T>::searchDataByCity(std::string param) {
     for (int pos = 0; pos < _cityDirectory.size(); pos++) {
         if (_cityDirectory.at(pos)->at(0)->get_builder() == param)
             return _cityDirectory.at(pos);
@@ -188,7 +187,7 @@ T MultiList<T>::searchDataByCity(std::string param) {
 }
 
 template<typename T>
-T MultiList<T>::searchDataByFinal(std::string param) {
+LinkedList<T*>* MultiList<T>::searchDataByFinal(std::string param) {
     for (int pos = 0; pos < _finalDirectory.size(); pos++) {
         if (_finalDirectory.at(pos)->at(0)->get_builder() == param)
             return _finalDirectory.at(pos);
@@ -261,4 +260,4 @@ T getParamDataValue(LinkedList<InnerLinkedList<Vehicle *>*>* directory, int posi
     }
 }
 
-#endif //PROJETOFINAL_MULTILISTA_SYSTEM_H
+#endif //MULTILISTA_H
